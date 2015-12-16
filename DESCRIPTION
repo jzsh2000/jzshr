@@ -1,3 +1,13 @@
 Package: jzshr
 Version: 0.1
+Date: 2015-12-16
+Title: jzsh2000's R Code
+Description: Miscellaneous R functions.
+Author: JIN Xiaoyang <jinxiaoyang@jinxiaoyang.cn>
+Maintainer: JIN Xiaoyang <jinxiaoyang@jinxiaoyang.cn>
+Suggests:
+    devtools,
+    roxygen2
+License: GPL-3
+URL: https://github.com/jzsh2000/jzshr
 RoxygenNote: 5.0.1
