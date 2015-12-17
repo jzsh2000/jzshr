@@ -15,7 +15,9 @@
 prime_factor <-
 function(x, uniq=FALSE)
 {
-    result.vec <- system2("factor", paste(x, collapse = " "), stdout = TRUE)
+    command = ifelse(Sys.which("gfactor")!="", "gfactor", "factor")
+    result.vec <- system2(command, paste(x, collapse = " "), stdout = TRUE)
+
     lapply(result.vec,
 	   function(result){
 	       result <- sub("^[0-9]*: *", "", result)
