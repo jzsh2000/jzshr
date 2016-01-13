@@ -1,10 +1,13 @@
 Package: jzshr
-Version: 0.1
-Date: 2015-12-16
+Version: 0.1.3
+Date: 2016-01-13
 Title: jzsh2000's R Code
 Description: Miscellaneous R functions.
 Author: JIN Xiaoyang <jinxiaoyang@jinxiaoyang.cn>
 Maintainer: JIN Xiaoyang <jinxiaoyang@jinxiaoyang.cn>
+Imports:
+    utils,
+    stringr
 Suggests:
     devtools,
     roxygen2

@@ -4,10 +4,14 @@
 \alias{has_package}
 \title{Check if a package is already installed}
 \usage{
-has_package(x)
+has_package(pkg, lib.loc = NULL)
 }
 \arguments{
-\item{x}{a character vector, each value represents a package name.}
+\item{pkg}{a character vector, each value represents a package name.}
+
+\item{lib.loc:}{a character vector of directory names of R libraries, or
+'NULL'.  The default value of 'NULL' corresponds to all
+libraries currently known.'}
 }
 \value{
 a logical vector. TRUE means the package is installed.

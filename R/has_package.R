@@ -1,7 +1,10 @@
 #' Check if a package is already installed
 #'
 #' Read package list and check if a package is installed or not.
-#' @param x a character vector, each value represents a package name.
+#' @param pkg a character vector, each value represents a package name.
+#' @param lib.loc: a character vector of directory names of R libraries, or
+#'                 'NULL'.  The default value of 'NULL' corresponds to all
+#'                 libraries currently known.'
 #'
 #' @return a logical vector. TRUE means the package is installed.
 #'
@@ -11,7 +14,7 @@
 #' @export
 
 has_package <-
-function(x)
+function(pkg, lib.loc = NULL)
 {
-    is.element(x, (.packages(all=TRUE)))
+    is.element(pkg, (.packages(all.available = TRUE, lib.loc = lib.loc)))
 }
