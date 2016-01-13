@@ -2,4 +2,5 @@
 
 export(has_package)
 export(packageAuthor)
+export(packageMaintainer)
 export(prime_factor)
