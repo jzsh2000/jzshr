@@ -26,5 +26,7 @@ function(pkg, lib.loc = NULL)
     author.str = utils::packageDescription(pkg = pkg, lib.loc = lib.loc, fields = "Author")
     author.str = gsub('\\s*\\n\\s*', ' ', author.str)
     author.vec = stringr::str_extract_all(author.str, '[^,<\\[(]+(\\s*(<[^>]+>)?(\\[[^\\]]+\\])?(\\([^)]+\\))?)*', simplify = TRUE)
-    stringr::str_trim(stringr::str_extract(author.vec, '^[^<\\[(]+'))
+    author.vec = stringr::str_extract(author.vec, '^[^<\\[(]+')
+    author.vec = unlist(stringr::str_split(author.vec, "(\\bwith .+ from\\b|\\band\\b)"))
+    stringr::str_trim(author.vec)
 }
