@@ -2,7 +2,7 @@
 #'
 #' Read package list and check if a package is installed or not.
 #' @param pkg a character vector, each value represents a package name.
-#' @param lib.loc: a character vector of directory names of R libraries, or
+#' @param lib.loc a character vector of directory names of R libraries, or
 #'                 'NULL'.  The default value of 'NULL' corresponds to all
 #'                 libraries currently known.'
 #'

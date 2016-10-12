@@ -17,10 +17,10 @@
 #' @param shape.legend the legend text corresponds to point shape
 #'
 #' @examples
-#' count <- read.delim("CD5-DC/rawcount/hg19/raw-count.txt", row.names = 1)
-#' # head(count)
-#' plot_pca(count, rep(c("CD5p", "CD5n"), each=3),
-#'     rep(c("AN239","AN342","AN403"),2))
+#' count = matrix(rpois(400, 101:140), 100, 4)
+#' colnames(count) <- paste("sample", 1:4, sep="_")
+#' rownames(count) <- paste("gene", 1:100, sep="_")
+#' plot_pca(count, rep(c('c1','c2'), 2), rep(c('d1', 'd2'), each=2))
 #'
 #' @export
 
@@ -33,7 +33,7 @@ function(count, color, shape, color.legend = "cell", shape.legend = "donor")
     rld <- rlog(dds)
     data <- plotPCA(rld, intgroup=c("color", "shape"), returnData=TRUE)
     percentVar <- round(100 * attr(data, "percentVar"))
-    ggplot(data, aes(PC1, PC2, color=color, shape=shape)) +
+    ggplot(data, aes(x=PC1, y=PC2, color=color, shape=shape)) +
         geom_point(size=3) +
         xlab(paste0("PC1: ",percentVar[1],"% variance")) +
         ylab(paste0("PC2: ",percentVar[2],"% variance")) +

@@ -9,7 +9,7 @@ has_package(pkg, lib.loc = NULL)
 \arguments{
 \item{pkg}{a character vector, each value represents a package name.}
 
-\item{lib.loc:}{a character vector of directory names of R libraries, or
+\item{lib.loc}{a character vector of directory names of R libraries, or
 'NULL'.  The default value of 'NULL' corresponds to all
 libraries currently known.'}
 }

@@ -26,10 +26,10 @@ reflect sample relationship. That's a good way to check batch effect from
 gene expression matrix.
 }
 \examples{
-count <- read.delim("CD5-DC/rawcount/hg19/raw-count.txt", row.names = 1)
-# head(count)
-plot_pca(count, rep(c("CD5p", "CD5n"), each=3),
-    rep(c("AN239","AN342","AN403"),2))
+count = matrix(rpois(400, 101:140), 100, 4)
+colnames(count) <- paste("sample", 1:4, sep="_")
+rownames(count) <- paste("gene", 1:100, sep="_")
+plot_pca(count, rep(c('c1','c2'), 2), rep(c('d1', 'd2'), each=2))
 
 }
 
