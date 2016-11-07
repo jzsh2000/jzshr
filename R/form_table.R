@@ -7,9 +7,12 @@
 #' @param set2 the 2nd set
 #' @param total the full set
 #'
+#' @return a 2*2 matrix (contingency table)
+#'
 #' @examples
 #' form_table(letters[1:10], letters[5:15], letters)
 #'
+#' @aliases form.table
 #' @export
 
 form_table <-
