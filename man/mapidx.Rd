@@ -25,4 +25,3 @@ Map elements from one set to another, and return the index
 mapidx(c('h','e','l','l','o'), c('w','o','r','l','d'))
 
 }
-

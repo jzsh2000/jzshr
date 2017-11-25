@@ -22,4 +22,3 @@ prime_factor(1001:1010)
 prime_factor(65536, uniq=TRUE)
 
 }
-

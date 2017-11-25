@@ -23,4 +23,3 @@ Read package list and check if a package is installed or not.
 has_package('stringr')
 
 }
-

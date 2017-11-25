@@ -20,4 +20,3 @@ zscore(x)
 zscore(x, byrow=FALSE)
 
 }
-

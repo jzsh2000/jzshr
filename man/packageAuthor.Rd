@@ -24,4 +24,3 @@ Parses and returns author-associated information of a package.
 packageAuthor('base')
 
 }
-

@@ -26,4 +26,3 @@ a expression matrix and two corresponding gene sets.
 \seealso{
 \code{\link[gCMAP]{connectivity_score}}
 }
-

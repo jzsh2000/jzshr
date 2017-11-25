@@ -24,4 +24,3 @@ Parses and returns maintainer-associated information of a package.
 packageMaintainer('base')
 
 }
-
